@@ -8,7 +8,7 @@
 namespace flags {
 
   template <typename T, typename = void>
-  struct is_flags : std:false_type {};
+  struct is_flags : std::false_type {};
   template <typename T>
   struct is_flags < T, decltype(enableEnumFlags(T{})) > : std::true_type {};
 
